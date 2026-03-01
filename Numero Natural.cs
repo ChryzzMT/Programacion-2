@@ -1,10 +1,8 @@
 
 public class NumeroNatural
 {
-    //caracteristicas
     private int valor;
     
-    //constructor por defecto
     public NumeroNatural()
     {
         valor = 1;
