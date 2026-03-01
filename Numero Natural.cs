@@ -28,7 +28,6 @@ public class NumeroNatural
     }
 
     
-    //Metodo que retorna la cantidad de digitos
     public int CantDig()
     {
         int n = valor;
@@ -44,7 +43,6 @@ public class NumeroNatural
         }
         return  cont;
     }
-    //Insertar un dígito X en la posición Y del valor
     public void InsertarDigito(int digito, int posicion)
     {
 
@@ -77,7 +75,6 @@ public class NumeroNatural
 	    num2=temp;
     }
     
-    //Ordenar dígitos (2 métodos de ordenamiento), Ej.: 78291 --> 12789
     public void OrdenamientoInsercion()
     {
 	    int[] valorArr = new int [CantDig()];
@@ -120,15 +117,15 @@ public class NumeroNatural
 		    valor = valor / 10;
 	    }
 
-	    for (int gap = valorArr.Length / 2; gap > 0; gap = gap / 2)
+	    for (int interv = valorArr.Length / 2; interv > 0; interv = interv / 2)
 	    {
-		    for (int i = gap; i < valorArr.Length; i++)
+		    for (int i = interv; i < valorArr.Length; i++)
 		    {
 			    int j = i;
-			    while (j >= gap && valorArr[j] < valorArr[j - 1])
+			    while (j >= interv && valorArr[j] < valorArr[j - 1])
 			    {
 				    Cambiar(ref valorArr[j],ref valorArr[j-1]);
-				    j = j - gap;
+				    j = j - interv;
 			    }
 			    
 		    }
@@ -142,7 +139,6 @@ public class NumeroNatural
     }
     
     
-    //Convertir a Literal, Ej.: 125 --> ciento veinticinco
     public string ConvLiteral()
     {
 	    string[,] matrizLiterales = {
